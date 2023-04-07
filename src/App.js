@@ -1,5 +1,4 @@
 import ExpenseItem from "./components/ExpenseItem";
-
 function App() {
   const expense = [
     {
@@ -35,7 +34,7 @@ function App() {
             amount={expense.amount} 
             date={expense.date}
             LocationOfExpenditure={expense.LocationOfExpenditure}
-            ></ExpenseItem>
+            />
           )
         })}
       </div>
