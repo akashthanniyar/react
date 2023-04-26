@@ -1,5 +1,7 @@
 import Expenses from "./components/Expense/Expenses";
-function App() {
+import React from "react";
+
+const App=()=> {
   const expense = [
     {
       id: 'e1',
@@ -27,9 +29,10 @@ function App() {
     return (
       <div>
         <h2>Let's get started!</h2>
-        {expense.map((expense)=>{
+        {
+        expense.map((exp)=>{  
           return (
-            <Expenses items={expense}/>
+            <Expenses key ={exp.id} items={exp}/>
           )
         })}
       </div>
