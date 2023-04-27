@@ -1,5 +1,6 @@
 import Expenses from "./components/Expense/Expenses";
 import React from "react";
+import AddExpense from "./components/AddExpense/AddExpense";
 
 const App=()=> {
   const expense = [
@@ -28,7 +29,7 @@ const App=()=> {
   ];
     return (
       <div>
-        <h2>Let's get started!</h2>
+        <AddExpense/>
         {
         expense.map((exp)=>{  
           return (
