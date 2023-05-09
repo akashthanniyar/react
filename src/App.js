@@ -1,6 +1,8 @@
 import Expenses from "./components/Expense/Expenses";
 import React, {useState} from "react";
 import AddExpense from "./components/AddExpense/AddExpense";
+import ExpensesFilter from './components/Expense/ExpensesFilter';
+
 
 
 const App=()=> {
@@ -41,7 +43,9 @@ const App=()=> {
     }
     return (
       <div>
+     
         <AddExpense onAddExpense={addExpenseHandler} />
+        <ExpensesFilter />
         {
         expense.map((exp)=>{  
           return (
