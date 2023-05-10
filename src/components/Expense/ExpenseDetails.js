@@ -9,11 +9,11 @@ const ExpenseDetails=(props)=>{
   // };  
     return (
         <div className="expense-item__description">
-        <h2>{props.title}</h2> 
-        {/* <h2>{props.LocationOfExpenditure}</h2> */}
-      <div className="expense-item__price">${props.amount}</div>
-      {/* <button onClick={clickHandler}>Change Expense</button>   */}
-      </div>
-    )
+          <h2>{props.title}</h2>
+          {/* <h2>{props.LocationOfExpenditure}</h2> */}
+          <div className="expense-item__price">${props.amount}</div>
+          {/* <button onClick={clickHandler}>Change Expense</button>   */}
+        </div>
+    );
 }
 export default ExpenseDetails;

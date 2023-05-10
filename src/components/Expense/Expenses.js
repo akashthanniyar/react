@@ -1,8 +1,9 @@
-import React, {useState} from "react";
-import ExpenseItem from "./ExpenseItem";
+import React, {useState} from "react"
 import Card from "../UI/Card"
 import './Expenses.css'
 import ExpensesFilter from './ExpensesFilter';
+import ExpenseList from "./ExpenseList";
+import './ExpenseList.css'
 
 const Expenses=(props)=>{
 
@@ -24,14 +25,12 @@ const Expenses=(props)=>{
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
-        {filteredExpense.map((expense) => (
-          <ExpenseItem
-            key={expense.id}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          />
-        ))}
+        <ExpenseList items={filteredExpense} />
+        {filteredExpense.length === 1 && (
+          <p className="expenses-list__fallback ">
+            Only single Expense here. Please add more...
+          </p>
+        )}
       </Card>
     );
 }
