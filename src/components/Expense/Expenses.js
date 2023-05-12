@@ -4,6 +4,7 @@ import './Expenses.css'
 import ExpensesFilter from './ExpensesFilter';
 import ExpenseList from "./ExpenseList";
 import './ExpenseList.css'
+import ExpensesChart from './ExpensesChart'
 
 const Expenses=(props)=>{
 
@@ -25,6 +26,7 @@ const Expenses=(props)=>{
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
+        <ExpensesChart expense={filteredExpense}/>
         <ExpenseList items={filteredExpense} />
         {filteredExpense.length === 1 && (
           <p className="expenses-list__fallback ">
